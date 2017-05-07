@@ -1,1 +1,15 @@
-<p class="lead">Hello <%= username %>, Chat with other users.</p>
+<p class="lead">Hello <div id="username"><%= username %></div>, Chat with other users.</p>
+
+<div class="chat-room">
+  <ul id="messages-box" class="list-group">
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+
+  <div class="input-group">
+    <input id="message" type="text" class="form-control" aria-label="...">
+    <div class="input-group-btn">
+      <button id="send-message" type="button" class="btn btn-default">Send Message</button>
+    </div>
+  </div>
+  </br>
+</div>
