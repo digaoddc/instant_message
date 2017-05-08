@@ -1,15 +1,23 @@
-<p class="lead">Hello <div id="username"><%= username %></div>, Chat with other users.</p>
+<h2>Chat</h2>
+<p class="lead">Hello <%= username %>, Chat with other users.</p>
+<div class="hidden" id="username"><%= username %></div>
+<div class="hidden" id="dialect"><%= dialect%></div>
 
-<div class="chat-room">
+<div class="chat-room col-md-9">
   <ul id="messages-box" class="list-group">
-    <li class="list-group-item">Vestibulum at eros</li>
   </ul>
 
   <div class="input-group">
-    <input id="message" type="text" class="form-control" aria-label="...">
+    <input id="message" type="text" class="form-control" aria-label="">
     <div class="input-group-btn">
-      <button id="send-message" type="button" class="btn btn-default">Send Message</button>
+      <button id="send-message" type="button" class="btn btn-primary">Send</button>
     </div>
   </div>
   </br>
 </div>
+
+<div class="col-md-3">
+  <ul id="active-users" class="list-group">
+  </ul>
+</div>
+

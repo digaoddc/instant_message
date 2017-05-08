@@ -7,14 +7,27 @@ class MessagesChannel < ApplicationCable::Channel
     ActionCable.server.broadcast "messages_channel", render_message(data)
   end
 
+  def appear(data)
+    speak(data)
+  end
+
   private
 
   def render_message(data)
-    puts data.inspect
     {
-      message: data['message'],
+      message: translate(data),
       from: data['from'],
-      time: Time.now.strftime("%D %R")
+      time: time_now,
+      action: data['action'],
+      dialect: data['dialect']
     }
+  end
+
+  def translate(data)
+    DialectTranslator.perform(data['message'], data['dialect'])
+  end
+
+  def time_now
+    Time.now.strftime("%D %R")
   end
 end

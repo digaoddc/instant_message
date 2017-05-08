@@ -10,4 +10,8 @@ module ApplicationHelper
   def username
     session[:username]
   end
+
+  def dialect
+    session[:dialect]
+  end
 end

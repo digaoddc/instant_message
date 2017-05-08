@@ -1,6 +1,9 @@
-<%= form_tag('/signin', class: 'form-signin') do -%>
-  <h2 class="form-signin-heading">Please sign in</h2>
-  <%= text_field_tag 'username', nil,  class: 'form-control', placeholder: 'Username' %>
-  <%= select_tag "Dialect", options_for_select([ "Yoda", "Valley Gir", "Binary Code" ], "MasterCard"), class: 'form-item', id: 'dialect' %>
-  <button class="btn btn-lg btn-primary btn-block form-item" type="submit">Sign in</button>
-<% end %>
+<div class="col-md-9">
+  <h1 class="text-center">Please sign in</h1>
+  <%= form_tag('/signin', class: 'form-signin') do -%>
+    <%= text_field_tag 'username', nil,  class: 'form-control', placeholder: 'Username' %>
+    <label for="Dialect">Dialect</label>
+    <%= select_tag "Dialect", options_for_select([ "Yoda", "Valley Gir", "Binary Code" ], "MasterCard"), class: 'form-item', id: 'dialect' %>
+    <button class="btn btn-lg btn-primary btn-block form-item" type="submit">Sign in</button>
+  <% end %>
+</div>

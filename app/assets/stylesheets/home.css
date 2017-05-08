@@ -6,3 +6,20 @@
   margin: 0 auto;
   max-width: 300px;
 }
+
+.home-template{
+  padding-top: 35px;
+}
+
+#messages-box{
+  min-width: 500px;
+  min-height: 42px;
+  border: 1px solid #ddd;
+}
+
+.online{
+  color: green;
+}
+.hidden{
+  display:none;
+}
