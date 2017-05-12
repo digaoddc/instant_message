@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
   def logged?
     session[:username].present? && session[:dialect].present?
@@ -13,5 +15,9 @@ module ApplicationHelper
 
   def dialect
     session[:dialect]
+  end
+
+  def dialect_options
+    [%w[Yoda yoda], ['Valley Girl', 'valley_girl'], ['Binary Code', 'binary_code']]
   end
 end
