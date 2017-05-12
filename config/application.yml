@@ -1,0 +1,11 @@
+defaults: &defaults
+  dialects:
+    yoda: "http://api.funtranslations.com"
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

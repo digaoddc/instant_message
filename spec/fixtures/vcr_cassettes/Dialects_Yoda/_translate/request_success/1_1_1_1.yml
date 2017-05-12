@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.funtranslations.com/translate/yoda.json?text=Master%20Obiwan%20has%20lost%20a%20planet
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.funtranslations.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 12 May 2017 12:11:09 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET,POST,PUT,OPTIONS
+      Access-Control-Allow-Headers:
+      - "*"
+      X-Auth-Status:
+      - 'true'
+      X-Ratelimit-Limit:
+      - 5 per hour
+      X-Ratelimit-Remaining:
+      - '3'
+      Cache-Control:
+      - private, max-age=43200, pre-check=86400, post-check=43200
+      Expires:
+      - Sat, 13 May 2017 00:11:10 GMT
+      X-Powered-By:
+      - Luracast Restler v3.0.0rc3
+      Content-Language:
+      - en
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "success": {
+                "total": 1
+            },
+            "contents": {
+                "translated": "Lost a planet,  master obiwan has",
+                "text": "Master Obiwan has lost a planet",
+                "translation": "yoda"
+            }
+        }
+    http_version: 
+  recorded_at: Fri, 12 May 2017 12:11:10 GMT
+recorded_with: VCR 3.0.3

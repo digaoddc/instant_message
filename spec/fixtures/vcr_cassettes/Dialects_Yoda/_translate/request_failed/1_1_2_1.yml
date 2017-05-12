@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.funtranslations.com/translate/yoda.json?text=Master%20Obiwan%20has%20lost%20a%20planet
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.funtranslations.com
+  response:
+    status:
+      code: 429
+      message: Too Many Requests
+    headers:
+      Date:
+      - Fri, 12 May 2017 12:14:49 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET,POST,PUT,OPTIONS
+      Access-Control-Allow-Headers:
+      - "*"
+      X-Auth-Status:
+      - 'true'
+      X-Ratelimit-Limit:
+      - 5 per hour
+      X-Ratelimit-Remaining:
+      - '0'
+      Cache-Control:
+      - private, max-age=43200, pre-check=86400, post-check=43200
+      Expires:
+      - Sat, 13 May 2017 00:14:50 GMT
+      X-Powered-By:
+      - Luracast Restler v3.0.0rc3
+      Content-Language:
+      - en
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "error": {
+                "code": 429,
+                "message": "Too Many Requests: Rate limit of 5 requests per hour exceeded. Please wait for 59 minutes and 47 seconds."
+            }
+        }
+    http_version: 
+  recorded_at: Fri, 12 May 2017 12:14:51 GMT
+recorded_with: VCR 3.0.3
