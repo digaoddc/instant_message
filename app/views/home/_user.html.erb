@@ -18,6 +18,9 @@
 
 <div class="col-md-3">
   <ul id="active-users" class="list-group">
+    <% @users.each do |user| %>
+      <%= "<li class='list-group-item online' data-user='#{user}'>#{user}</li>".html_safe %>
+    <% end %>
   </ul>
 </div>
 

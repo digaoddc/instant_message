@@ -1,21 +1,10 @@
 App.messages = App.cable.subscriptions.create('MessagesChannel', {
   connected: function() {
     console.log("Connected to websocket!");
-    return this.perform('appear', {
-      from: this.sender()
-    });
   },
   received: function(data) {
     console.log(data);
-    if(data.action == "speak") {
-      $("#messages-box").append(this.format(data));
-    } else {
-      var msg = this.user_li(data.from);
-      $("#active-users").append(msg);
-    }
-  },
-
-  disconnected: function() {
+    $("#messages-box").append(this.format(data));
   },
 
   speak: function(msg) {
@@ -35,17 +24,18 @@ App.messages = App.cable.subscriptions.create('MessagesChannel', {
     return "<li class='list-group-item'>" + message + "</li>"
   },
 
-  user_li: function(message) {
-    return "<li class='list-group-item online'>" + message + "</li>"
-  },
-
   sender: function(){
     return $("#username").html();
   },
 
   dialect: function(){
     return $("#dialect").html();
-  }
+  },
+
+  display: function(message){
+    li = this.speak_li(message);ho
+    $("#messages-box").append(li);
+  },
 
 });
 
