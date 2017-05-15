@@ -3,7 +3,7 @@
 class OnlineStorage
   COLLECTION = 'user'
 
-  def initialize(conn = Redis.new)
+  def initialize(conn = Redis.new(host: RedisConfig.host))
     @conn = conn
   end
 
