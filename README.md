@@ -8,7 +8,7 @@ A simple rails application to demonstrate some features of action cable for rail
 Make sure to have docker installed
 ```
 $ docker-compose build
-$ docker-compose run
+$ docker-compose up
 ```
 
 
